@@ -1,0 +1,30 @@
+
+<div id="show">
+
+<h1>
+  <%=h @wg_vocab.title %>
+</h1>
+
+<h2>
+  <%=h @wg_vocab.sub_title %>
+</h2>
+
+<p id="date">
+  <%=h @wg_vocab.date %>
+</p>
+
+<h3>Abstract</h3>
+
+<p id="summary">
+  <%= @wg_vocab.summary %>
+</p>
+</div><!--/show-->
+
+<div id="body_content">
+<p>
+  <%= @wg_vocab.content %>
+</p>
+</div>
+
+
+

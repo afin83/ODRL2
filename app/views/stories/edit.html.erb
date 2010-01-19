@@ -1,0 +1,50 @@
+<h1>Editing Work Group</h1>
+
+<div>
+<% form_for(@story) do |f| %>
+  <%= f.error_messages %>
+
+  <h4>
+    <%= f.label :title %><br />
+  </h4>
+	<p>  
+		<%= f.text_field :title %>
+  </p>
+  <h4>
+    <%= f.label :sub_title %><br />
+  </h4>
+	<p>
+		<%= f.text_field :sub_title %>
+  </p>
+  <h4>
+    <%= f.label :date %><br />
+	</h4>	
+	<p>
+		<%= f.text_field :date %>
+  </p>
+  <h4>
+    <%= f.label :summary %><br />
+  </h4>
+	<p>
+	<%= f.text_area :summary, :id => 'sum' %>
+  </p>
+  <h4 id="content">
+    <%= f.label :content %><br />
+  </h4>
+
+
+
+	<%= f.text_area :content, :class => 'content' %>
+
+
+
+  <p id="update">
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<p id="show_back">
+<%= link_to 'Show', @story %> |
+<%= link_to 'Back', stories_path %>
+</p>
+</div><!--edit-->

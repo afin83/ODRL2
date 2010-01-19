@@ -1,0 +1,32 @@
+<h1>Current Working Groups</h1>
+
+<div id="edit_home">
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Sub title</th>
+    <th>Date</th>
+    <th>Summary</th>
+    <th>Options</th>
+  </tr>
+
+<% @stories.each do |story| %>
+  <tr>
+    <td><%=h story.title %></td>
+    <td><%=h story.sub_title %></td>
+    <td><%=h story.date %></td>
+    <td><%=h story.summary %></td>
+    
+    <td class='list-actions'>
+    	<%= link_to 'View', story %>
+    	<%= link_to 'Edit', edit_story_path(story) %>
+    	<%= link_to 'Delete', story, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New story', new_story_path, :id => "new_story" %>
+</div>

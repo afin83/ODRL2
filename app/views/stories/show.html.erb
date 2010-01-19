@@ -1,0 +1,30 @@
+<div id="show">
+
+<h1>
+  <%=h @story.title %>
+</h1>
+
+<h2>
+  <%=h @story.sub_title %>
+</h2>
+
+<p id="date">
+  <%=h @story.date %>
+</p>
+
+<h3>Abstract</h3>
+
+<p id="summary">
+  <%= @story.summary %>
+</p>
+</div><!--/show-->
+
+<div id="body_content">
+<p>
+  <%= @story.content %>
+</p>
+</div>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>
+

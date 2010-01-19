@@ -1,0 +1,25 @@
+<h2 id="heading"><span>The Open Digital Rights Language (ODRL) Initiative is an international effort aimed at developing and promoting an open standard for rights expressions.</span> ODRL is intended to provide flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distributing and consuming of digital media across all sectors and communities.	
+</h2>
+
+<div id="home_main_content">
+<h2>Current Working Groups</h2>
+<ul class="main_category">
+	<li class="title"><h3>ODRL V2.0 - Working Group</h3></li>
+	<% for story in @stories -%>		
+		<li>
+		<p class="date"><%=h story.date %></p>
+		<p class="type"><%=h story.sub_title %></p>
+		<h4><%=h story.title %></h4>
+		<h5><a class="slider" href="#">View Document Summary</a></h5>
+					
+			<div class="dropdown_box"><p>
+			<%= story.summary %>
+			</p></div><!--/dropdown_box-->
+		
+		</li>	
+	<% end %>
+</ul>
+</div><!--/home_main_content-->
+	
+	
+	

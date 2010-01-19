@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>ODRL Initiative - <%= @title %></title>
+	<%= stylesheet_link_tag 'reset', 'type', 'styles', 'wg', :media=>'screen'%>
+	<%= javascript_include_tag 'jquery-1.3.2.js', :cache => 'front_end' %>
+	<%= javascript_include_tag 'slide.js', :cache => 'front_end' %>
+	
+	<!--[if IE 6]>
+	<%= stylesheet_link_tag 'ie6', :media=>'screen'%>
+	<%= javascript_include_tag 'ie6_menu.js', :cache => 'front_end' %>
+	<!{endif}-->
+		
+</head>
+<body>
+<div id="nav_runner"></div>
+<div id="primary_content">	
+	<div id="masthead">
+		<h1><a href="#"><span>ODRL initiative</span></a></h1>
+		<h2>an open rights language for the digital commons</h2>
+			
+		<ul id="nav">
+			<li class="border_right"><a href="#">HOME</a></li>
+			<li id="arrow" class="border_right"><a href="#">WORKING GROUPS</a>
+			<ul>
+				<li><a href="#">current working groups</a></li>
+				<li><a href="#">completed working groups</a></li>
+				<li><a href="#">ODRL RDFa task force</a></li>
+				<li><a href="#">ODRL microformats task force</a></li>
+				<li><a href="#">profile working groups</a></li>				
+			</ul>
+			</li>
+			<li class="border_right"><a href="#">ABOUT ODRL</a></li>
+			<li class="border_right"><a href="#">SPECIFICATIONS &amp; PROFILES</a></li>
+			<li><a href="#">EVENTS</a></li>
+		</ul>
+			
+	</div><!--/masthead-->
+
+<%= yield %>		
+
+</div><!--/primary_content-->
+		
+<div id="footer">
+	<div id="footer_content">
+		<h5><a href="#"><span>ODRL.net</span></a></h5>
+		<h6>an open rights language for the digital commons</h6>
+		<p id="copy_right">Copyright &copy; 2000 - 2010 ODRL Initiative</p>
+		<p id="terms"><a href="#">Terms of Use</a></p>
+		<p id="questions">For questions about the ODRL Initiative email</p>
+		<p id="contact"><a href="mailto:contact@odrl.net?subject=Contact%ODRL">contact@odrl.net</a></p>
+	</div><!--footer_content-->
+</div><!--/footer-->		
+	
+</body>
+</html>

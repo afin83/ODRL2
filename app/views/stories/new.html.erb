@@ -1,0 +1,39 @@
+<h1>New story</h1>
+
+<% form_for(@story) do |f| %>
+  <%= f.error_messages %>
+
+  <h4>
+    <%= f.label :title %><br />
+  </h4>    
+    <%= f.text_field :title %>
+  </p>
+  <h4>
+    <%= f.label :sub_title %><br />
+  </h4>
+    <%= f.text_field :sub_title %>
+  </p>
+  <h4>
+    <%= f.label :date %><br />
+  </h4>
+    <%= f.text_field :date %>
+  </p>
+  <h4>
+    <%= f.label :summary %><br />
+  </h4>
+    <%= f.text_area :summary, :id => 'sum' %>
+  </p>
+  <h4 id="content">
+    <%= f.label :content %><br />
+  </h4>
+    <%= f.text_area :content, :class => 'content' %>
+  </p>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<p id="show_back">
+<%= link_to 'Back', stories_path %>
+</p>
